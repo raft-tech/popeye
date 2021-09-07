@@ -18,7 +18,7 @@ RUN apk update && apk upgrade ;\
 
 # -----------------------------------------------------------------------------
 # Image...
-FROM alpine:3.11.2
+FROM alpine:3.13.6
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY --from=build /go/bin/popeye /bin/popeye
 ENTRYPOINT [ "/bin/popeye" ]
